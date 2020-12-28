@@ -1,6 +1,6 @@
 class Api::MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.all.order("thumbs_up DESC")
   end
 
   def show
