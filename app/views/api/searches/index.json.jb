@@ -1,0 +1,7 @@
+@movies.map do |movie|
+  {
+    title: movie["title"],
+    release_year: movie["year"],
+    imdb_id: movie["imdb_id"],
+  }
+end
