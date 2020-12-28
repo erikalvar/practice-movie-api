@@ -36,4 +36,20 @@ class Api::MoviesController < ApplicationController
 
     render "show.json.jb"
   end
+
+  def update
+    imdb_id = params[:id]
+
+    @movie = Movie.find_by(imdb_id: imdb_id)
+
+    if params["thumbs"] == "up"
+      @movie.thumbs_up += 1
+      @movie.save
+    elsif params["thumbs"] == "down"
+      @movie.thumbs_down += 1
+      @movie.save
+    end
+
+    render "show.json.jb"
+  end
 end
