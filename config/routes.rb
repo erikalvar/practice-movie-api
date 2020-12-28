@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   namespace :api do
     get "/searches" => "searches#index"
 
-    get "/movies/:imdb_id" => "movies#show"
+    get "/movies/:id" => "movies#show"
   end
 end
