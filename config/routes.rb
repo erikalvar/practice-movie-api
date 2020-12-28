@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 
     get "/movies" => "movies#index"
     get "/movies/:id" => "movies#show"
-    post "/movies/:id" => "movies#update"
+    patch "/movies/:id" => "movies#update"
   end
 end
