@@ -1,0 +1,13 @@
+@movies.map do |movie|
+  {
+    id: movie.id,
+    imdb_id: movie.imdb_id,
+    title: movie.title,
+    director: movie.director,
+    release_year: movie.release_year,
+    description: movie.description,
+    image: movie.image,
+    thumbs_up: movie.thumbs_up,
+    thumbs_down: movie.thumbs_down,
+  }
+end

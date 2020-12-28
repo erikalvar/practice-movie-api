@@ -1,4 +1,8 @@
 class Api::MoviesController < ApplicationController
+  def index
+    @movies = Movie.all
+  end
+
   def show
     # shows movie details by calling API with imdb_id
     imdb_id = params[:id]
